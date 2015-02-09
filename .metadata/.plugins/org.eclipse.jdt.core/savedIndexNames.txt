@@ -1,3 +1,0 @@
-INDEX VERSION 1.127+C:\Cloudera\baobab\.metadata\.plugins\org.eclipse.jdt.core
-2391690714.index
-1249225526.index
