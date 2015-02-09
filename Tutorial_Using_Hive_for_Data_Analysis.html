@@ -475,7 +475,7 @@ it in vi editor.</span></p>
 <p class=MsoNormal style='line-height:normal'><img src="http://blogfiles.naver.net/20150208_148/drivesol_1423387254506DEj1b_PNG/vi.png" border="0"></p>
 <p class=MsoNormal style='line-height:normal'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:#404040;mso-themecolor:text1;mso-themetint:191'>Ref*.) vi command option ?
+color:#404040;mso-themecolor:text1;mso-themetint:191'>Ref*.) vi command option :
 i(insert), w(save), q(quit)</span></p>
 
 <p class=MsoNormal style='text-align:left;line-height:normal'><span
@@ -493,11 +493,11 @@ an authority to read and write.</span></span></p>
             <p class=MsoNormal align=left style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal'><span lang=EN-US style='font-size:9.0pt;
   mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "맑은 고딕";mso-font-kerning:0pt'>sudo ?u hdfs hadoop ?mkdir /user/hadoop</span></p>
+  "맑은 고딕";mso-font-kerning:0pt'>sudo -u hdfs hadoop -mkdir /user/hadoop</span></p>
             <p class=MsoNormal align=left style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal'><span lang=EN-US style='font-size:9.0pt;
   mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "맑은 고딕";mso-font-kerning:0pt'>sudo ?u hdfs hadoop ?chmod +rw /user/hadoop</span></p>
+  "맑은 고딕";mso-font-kerning:0pt'>sudo -u hdfs hadoop -chmod +rw /user/hadoop</span></p>
         </td>
     </tr>
 </table>
@@ -517,7 +517,7 @@ mso-fareast-font-family:"맑은 고딕";mso-bidi-font-family:"맑은 고딕";mso
             <p class=MsoNormal align=left style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;tab-stops:center 261.2pt'><span
   lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"맑은 고딕";mso-font-kerning:0pt'>hadoop fs ?ls /user</span></p>
+  mso-fareast-font-family:"맑은 고딕";mso-font-kerning:0pt'>hadoop fs -ls /user</span></p>
         </td>
     </tr>
 </table>
@@ -537,7 +537,7 @@ mso-fareast-font-family:"맑은 고딕";mso-bidi-font-family:"맑은 고딕";mso
             <p class=MsoNormal align=left style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal'><span lang=EN-US style='font-size:9.0pt;
   mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "맑은 고딕";mso-font-kerning:0pt'>hadoop fs ?copyFromLocal TwitterData.txt
+  "맑은 고딕";mso-font-kerning:0pt'>hadoop fs -copyFromLocal TwitterData.txt
   /user/hadoop</span></p>
         </td>
     </tr>
@@ -558,7 +558,7 @@ mso-fareast-font-family:"맑은 고딕";mso-bidi-font-family:"맑은 고딕";mso
             <p class=MsoNormal align=left style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal'><span lang=EN-US style='font-size:9.0pt;
   mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "맑은 고딕";mso-font-kerning:0pt'>hadoop fs ?ls /user/hadoop/TwitterData.txt</span></p>
+  "맑은 고딕";mso-font-kerning:0pt'>hadoop fs -ls /user/hadoop/TwitterData.txt</span></p>
         </td>
     </tr>
 </table>
