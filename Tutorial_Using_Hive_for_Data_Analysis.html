@@ -2,7 +2,7 @@
 
 <head>
 <meta http-equiv="content-type" content="text/html; charset=euc-kr">
-<title>Á¦¸ñ ¾øÀ½</title>
+<title>Using Hive for Data Analysis</title>
 <meta name="generator" content="Namo WebEditor(Trial)">
 </head>
 
@@ -11,53 +11,26 @@
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
 auto;text-align:right'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
-11.0pt;font-family:"Arial","sans-serif";mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
- id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
- path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
- <v:stroke joinstyle="miter"/>
- <v:formulas>
-  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
-  <v:f eqn="sum @0 1 0"/>
-  <v:f eqn="sum 0 0 @1"/>
-  <v:f eqn="prod @2 1 2"/>
-  <v:f eqn="prod @3 21600 pixelWidth"/>
-  <v:f eqn="prod @3 21600 pixelHeight"/>
-  <v:f eqn="sum @0 0 1"/>
-  <v:f eqn="prod @6 1 2"/>
-  <v:f eqn="prod @7 21600 pixelWidth"/>
-  <v:f eqn="sum @8 21600 0"/>
-  <v:f eqn="prod @7 21600 pixelHeight"/>
-  <v:f eqn="sum @10 21600 0"/>
- </v:formulas>
- <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
- <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="_x0000_i1037" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_256/drivesol_1423388047544Kv5W0_PNG/logo_01.png"
- style='width:214.5pt;height:50.25pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png"
-  o:href="http://blogfiles.naver.net/20150208_256/drivesol_1423388047544Kv5W0_PNG/logo_01.png"/>
-</v:shape><![endif]--><![if !vml]><img width=286 height=67
+11.0pt;font-family:"Arial","sans-serif";mso-no-proof:yes'><img width=286 height=67
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png"
 alt="http://blogfiles.naver.net/20150208_256/drivesol_1423388047544Kv5W0_PNG/logo_01.png"
-v:shapes="_x0000_i1037"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1037"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:18.0pt;
-mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";color:#00B0F0'>TUTORIAL</span></b><span
-lang=EN-US><o:p></o:p></span></p>
+mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";color:#00B0F0'>TUTORIAL</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:18.0pt;
 mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";color:#002060'>Using
-Hive for Data Analysis</span></b><span lang=EN-US><o:p></o:p></span></p>
+Hive for Data Analysis</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
-font-family:"Arial","sans-serif";color:#0070C0'>Overview</span></b><span
-lang=EN-US><o:p></o:p></span></p>
+font-family:"Arial","sans-serif";color:#0070C0'>Overview</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:9.0pt;
 mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";color:#404040;
-mso-themecolor:text1;mso-themetint:191'>Background(Hive)</span></b><span
-lang=EN-US><o:p></o:p></span></p>
+mso-themecolor:text1;mso-themetint:191'>Background(Hive)</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
@@ -66,100 +39,96 @@ color:#0070C0'>Apahce Hive</span></i></b><span lang=EN-US style='font-size:
 </span><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;
 font-family:"Arial","sans-serif";color:#404040;mso-themecolor:text1;mso-themetint:
 191'>: A data query and management tool for a distributed dataset, exposed via
-a SQL-like query language called HiveQL. </span><span lang=EN-US><o:p></o:p></span></p>
+a SQL-like query language called HiveQL. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>In this tutorial, you
 will follow these </span><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>simple eight steps</span><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
-color:#404040;mso-themecolor:text1;mso-themetint:191'>.</span><span lang=EN-US><o:p></o:p></span></p>
+color:#404040;mso-themecolor:text1;mso-themetint:191'>.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:30.0pt'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>Step 1 ) Load a Data
-File from Local</span><span lang=EN-US><o:p></o:p></span></p>
+File from Local</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:30.0pt'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>Step 2 ) Make a table in
-hive</span><span lang=EN-US><o:p></o:p></span></p>
+hive</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:30.0pt'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>Step 3 ) Create a table
-using RCFormat</span><span lang=EN-US><o:p></o:p></span></p>
+using RCFormat</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:30.0pt'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>Step 4 ) Query the
-Tables</span><span lang=EN-US><o:p></o:p></span></p>
+Tables</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:30.0pt'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>Step 5 ) Compare the
-Managed Tables and External Tables</span><span lang=EN-US><o:p></o:p></span></p>
+Managed Tables and External Tables</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:30.0pt'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>Step 6 ) Storing as
-ORCFormat</span><span lang=EN-US><o:p></o:p></span></p>
+ORCFormat</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:30.0pt'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>Step 7 ) Create a
-PARTITIONED Table</span><span lang=EN-US><o:p></o:p></span></p>
+PARTITIONED Table</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:30.0pt'><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#0070C0'>Step 8 ) Create a Table
-with Bucket</span><span lang=EN-US><o:p></o:p></span></p>
+with Bucket</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>For all these progress,
-you need to setup Cloudera Quick Start VM before. </span><span lang=EN-US><o:p></o:p></span></p>
+you need to setup Cloudera Quick Start VM before. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>For these steps you have
-two ways. By using Command Line or using GUI(Hue Interface).</span><span
-lang=EN-US><o:p></o:p></span></p>
+two ways. By using Command Line or using GUI(Hue Interface).</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:9.0pt;
-font-family:"Arial","sans-serif"'>There are Links for Tutorial Video Step-by-Step<o:p></o:p></span></i></p>
+font-family:"Arial","sans-serif"'>There are Links for Tutorial Video Step-by-Step</span></i></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:9.0pt;
-font-family:"Arial","sans-serif"'>Log-in to Youtube with ¡®</span></i><span
+font-family:"Arial","sans-serif"'>Log-in to Youtube with â€˜</span></i><span
 lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>ID: iovintern1
 / PW: iovtech1</span><i style='mso-bidi-font-style:normal'><span lang=EN-US
-style='font-size:9.0pt;font-family:"Arial","sans-serif"'>¡¯, then you can watch
-the video.<o:p></o:p></span></i></p>
+style='font-size:9.0pt;font-family:"Arial","sans-serif"'>â€™, then you can watch
+the video.</span></i></p>
 <p class=MsoListParagraph style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
 auto;margin-left:38.0pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-mso-para-margin-left:0gd;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
-lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"¸¼Àº °íµñ";
-mso-bidi-font-family:"¸¼Àº °íµñ";color:windowtext'><span style='mso-list:Ignore'>&middot;<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+mso-para-margin-left:0gd;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"ë§‘ì€ ê³ ë”•";
+mso-bidi-font-family:"ë§‘ì€ ê³ ë”•";color:windowtext'><span style='mso-list:Ignore'>&middot;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><b
 style='mso-bidi-font-weight:normal'><u><span lang=EN-US style='color:#00B0F0'><a
-href="commandline.html">Watch Tutorial Video(Command Line)</a><o:p></o:p></span></u></b></p>
+href="commandline.html">Watch Tutorial Video(Command Line)</a></span></u></b></p>
 <p class=MsoListParagraph style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
 auto;margin-left:38.0pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-mso-para-margin-left:0gd;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
-lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"¸¼Àº °íµñ";
-mso-bidi-font-family:"¸¼Àº °íµñ";color:windowtext'><span style='mso-list:Ignore'>&middot;<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+mso-para-margin-left:0gd;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"ë§‘ì€ ê³ ë”•";
+mso-bidi-font-family:"ë§‘ì€ ê³ ë”•";color:windowtext'><span style='mso-list:Ignore'>&middot;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><b
 style='mso-bidi-font-weight:normal'><u><span lang=EN-US style='color:#00B0F0'><a
-href="hue.html">Watch Tutorial Video(GUI;Hue)</a><o:p></o:p></span></u></b></p>
-<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US><o:p>&nbsp;</o:p></span></p>
-<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US><o:p>&nbsp;</o:p></span></p>
+href="hue.html">Watch Tutorial Video(GUI;Hue)</a></span></u></b></p>
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;</p>
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;</p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-bidi-font-size:
 11.0pt;font-family:"Arial","sans-serif";color:#262626;mso-themecolor:text1;
-mso-themetint:217'>Using Command Line</span></i><span lang=EN-US><o:p></o:p></span></p>
+mso-themetint:217'>Using Command Line</span></i></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 text-indent:5.0pt;mso-char-indent-count:.5'><span lang=EN-US style='font-size:
 10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#404040;
-mso-themecolor:text1;mso-themetint:191'>&lt;TwitterData.txt&gt;</span><span
-lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+mso-themecolor:text1;mso-themetint:191'>&lt;TwitterData.txt&gt;</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -172,60 +141,55 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917312909647872<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cloudfeednet<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>PLURALSIGHT BIG DATA AND REPORTING WITH MONGODB
-  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;¢æ¢âs...
+  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;â‚¬â„¢s...
   http://t.co/2nD7FxL909<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:06 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Bay
   Area, CA<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:
-  1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917312909647872<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cloudfeednet<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>PLURALSIGHT BIG DATA AND REPORTING WITH MONGODB
-  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;¢æ¢âs...
+  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;â‚¬â„¢s...
   http://t.co/2nD7FxL909<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:06 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Bay
   Area, CA<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:
-  1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917312909647872<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cloudfeednet<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>PLURALSIGHT BIG DATA AND REPORTING WITH MONGODB
-  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;¢æ¢âs...
+  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;â‚¬â„¢s...
   http://t.co/2nD7FxL909<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:06 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Bay
   Area, CA<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:
-  1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917312909647872<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cloudfeednet<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>PLURALSIGHT BIG DATA AND REPORTING WITH MONGODB
-  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;¢æ¢âs...
+  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;â‚¬â„¢s...
   http://t.co/2nD7FxL909<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:06 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Bay
   Area, CA<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:
-  1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917312909647872<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cloudfeednet<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>PLURALSIGHT BIG DATA AND REPORTING WITH MONGODB
-  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;¢æ¢âs... http://t.co/2nD7FxL909<span
+  TUTORIAL-kEISO - - Arganza kEISO has released PluralSight&acirc;â‚¬â„¢s... http://t.co/2nD7FxL909<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat Apr 26 04:50:06 UTC 2014<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Bay Area, CA<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>326</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917350704513024<span
@@ -235,8 +199,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat Apr 26 04:50:15 UTC 2014<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago<span style='mso-tab-count:
   1'>&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>114</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>114</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917350704513024<span
@@ -246,8 +209,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat Apr 26 04:50:15 UTC 2014<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago<span style='mso-tab-count:
   1'>&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>114</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>114</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917350704513024<span
@@ -257,8 +219,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat Apr 26 04:50:15 UTC 2014<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago<span style='mso-tab-count:
   1'>&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>114</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>114</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917350704513024<span
@@ -268,8 +229,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat Apr 26 04:50:15 UTC 2014<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago<span style='mso-tab-count:
   1'>&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>114</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>114</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917350704513024<span
@@ -286,7 +246,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917352285401088<span
@@ -296,7 +256,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917352285401088<span
@@ -306,7 +266,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917352285401088<span
@@ -316,7 +276,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917352285401088<span
@@ -326,7 +286,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917352285401088<span
@@ -336,7 +296,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917352285401088<span
@@ -346,7 +306,7 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917352285401088<span
@@ -356,165 +316,159 @@ lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span>
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>117</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>459917353988284416<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>YoursTruly_Myy<span
   style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RT @O_ohULikeDatHuh: I never understood
   why people do certain things to try to make a person mad BUT that person
-  never acknowledges stupidi&acirc;¢æ&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
+  never acknowledges stupidi&acirc;â‚¬&brvbar;<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sat
   Apr 26 04:50:16 UTC 2014<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Chicago,
   IL<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style='mso-tab-count:
   1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>retweet<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>0<span
-  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1495</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
 font-family:"Arial","sans-serif";color:#0070C0'>Step 1. Load a Data File from
-Local</span></b><span lang=EN-US><o:p></o:p></span></p>
+Local</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>There is a sample data
 file. Copy the contents and create the text file name as TwitterData.txt. In
-this step, you will create and put the file using command-line.</span><span
-lang=EN-US><o:p></o:p></span></p>
+this step, you will create and put the file using command-line.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:black;mso-themecolor:text1;mso-no-proof:yes'><span
 style='mso-spacerun:yes'>&nbsp;</span></span><span lang=EN-US style='font-size:9.0pt;
 mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";color:black;
-mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1036"
- type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_83/drivesol_1423387251875AMbAN_PNG/00.png1/clip_image004.png"
- style='width:915pt;height:209.25pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png"
-  o:href="http://blogfiles.naver.net/20150208_83/drivesol_1423387251875AMbAN_PNG/00.png1/clip_image004.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1220 height=279
+mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1220 height=279
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png"
 alt="http://blogfiles.naver.net/20150208_83/drivesol_1423387251875AMbAN_PNG/00.png1/clip_image004.png"
-v:shapes="_x0000_i1036"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1036"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"¸¼Àº °íµñ";
-mso-hansi-font-family:±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>¨ç </span><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"ë§‘ì€ ê³ ë”•";
+mso-hansi-font-family:êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>â‘  </span><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Open the terminal. Type
 the command to create the text file. Then copy the contents from link and paste
-it in vi editor.</span><span lang=EN-US><o:p></o:p></span></p>
+it in vi editor.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -524,31 +478,25 @@ it in vi editor.</span><span lang=EN-US><o:p></o:p></span></p>
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  color:#404040;mso-themecolor:text1;mso-themetint:191'>sudo vi TwtterData.txt</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  color:#404040;mso-themecolor:text1;mso-themetint:191'>sudo vi TwtterData.txt</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1035"
- type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_148/drivesol_1423387254506DEj1b_PNG/vi.png"
- style='width:945pt;height:651pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png"
-  o:href="http://blogfiles.naver.net/20150208_148/drivesol_1423387254506DEj1b_PNG/vi.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1260 height=868
+lang=EN-US><span style='mso-no-proof:yes'><img border=0 width=1260 height=868
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png"
 alt="http://blogfiles.naver.net/20150208_148/drivesol_1423387254506DEj1b_PNG/vi.png"
-v:shapes="_x0000_i1035"><![endif]></span><o:p></o:p></span></p>
+v:shapes="_x0000_i1035"></span></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Ref*) vi command option :
-i(insert), w(save), q(quit)</span><span lang=EN-US><o:p></o:p></span></p>
+i(insert), w(save), q(quit)</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"¸¼Àº °íµñ";
-mso-hansi-font-family:±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>¨è<span lang=EN-US> Make
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"ë§‘ì€ ê³ ë”•";
+mso-hansi-font-family:êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>â‘¡<span lang=EN-US> Make
 a directory for load a data from local. And change an authority to read and
-write.</span></span><span lang=EN-US><o:p></o:p></span></p>
+write.</span></span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -558,22 +506,20 @@ write.</span></span><span lang=EN-US><o:p></o:p></span></p>
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'>sudo -u hdfs hadoop -mkdir /user/hadoop</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'>sudo -u hdfs hadoop -mkdir /user/hadoop</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'>sudo -u hdfs hadoop -chmod +rw /user/hadoop</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'>sudo -u hdfs hadoop -chmod +rw /user/hadoop</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"¸¼Àº °íµñ";
-mso-hansi-font-family:±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>¨é<span lang=EN-US> Check
-that you make directory successfully.</span></span><span lang=EN-US><o:p></o:p></span></p>
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"ë§‘ì€ ê³ ë”•";
+mso-hansi-font-family:êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>â‘¢<span lang=EN-US> Check
+that you make directory successfully.</span></span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -583,17 +529,17 @@ that you make directory successfully.</span></span><span lang=EN-US><o:p></o:p><
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto;tab-stops:center 261.2pt'><span
   lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'>hadoop fs -ls /user</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'>hadoop fs -ls /user</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"¸¼Àº °íµñ";
-mso-hansi-font-family:±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>¨ê<span lang=EN-US> Now,
-copy a data file from local to HDFS.</span></span><span lang=EN-US><o:p></o:p></span></p>
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"ë§‘ì€ ê³ ë”•";
+mso-hansi-font-family:êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>â‘£<span lang=EN-US> Now,
+copy a data file from local to HDFS.</span></span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -603,18 +549,18 @@ copy a data file from local to HDFS.</span></span><span lang=EN-US><o:p></o:p></
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'>hadoop fs -copyFromLocal TwitterData.txt
-  /user/hadoop</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'>hadoop fs -copyFromLocal TwitterData.txt
+  /user/hadoop</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"¸¼Àº °íµñ";
-mso-hansi-font-family:±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>¨ë<span lang=EN-US> Check
-that you copy a data file successfully.</span></span><span lang=EN-US><o:p></o:p></span></p>
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"ë§‘ì€ ê³ ë”•";
+mso-hansi-font-family:êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>â‘¤<span lang=EN-US> Check
+that you copy a data file successfully.</span></span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -624,40 +570,33 @@ that you copy a data file successfully.</span></span><span lang=EN-US><o:p></o:p
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'>hadoop fs -ls /user/hadoop/TwitterData.txt</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'>hadoop fs -ls /user/hadoop/TwitterData.txt</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
-font-family:"Arial","sans-serif";color:#0070C0'>Step 2. Make a Table in Hive</span></b><span
-lang=EN-US><o:p></o:p></span></p>
+font-family:"Arial","sans-serif";color:#0070C0'>Step 2. Make a Table in Hive</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:#404040;mso-themecolor:text1;mso-themetint:191;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1034" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_235/drivesol_1423387252163tMpfU_PNG/01.png"
- style='width:915pt;height:302.25pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image004.png"
-  o:href="http://blogfiles.naver.net/20150208_235/drivesol_1423387252163tMpfU_PNG/01.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1220 height=403
+color:#404040;mso-themecolor:text1;mso-themetint:191;mso-no-proof:yes'><img border=0 width=1220 height=403
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image004.png"
 alt="http://blogfiles.naver.net/20150208_235/drivesol_1423387252163tMpfU_PNG/01.png"
-v:shapes="_x0000_i1034"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1034"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='mso-bidi-font-size:10.0pt;font-family:"¸¼Àº °íµñ";mso-hansi-font-family:
-±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>¨ç </span><span lang=EN-US style='font-size:
-9.0pt;font-family:"¸¼Àº °íµñ";mso-hansi-font-family:±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>Launch
-the Hive shell.</span><span lang=EN-US><o:p></o:p></span></p>
+style='mso-bidi-font-size:10.0pt;font-family:"ë§‘ì€ ê³ ë”•";mso-hansi-font-family:
+êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>â‘  </span><span lang=EN-US style='font-size:
+9.0pt;font-family:"ë§‘ì€ ê³ ë”•";mso-hansi-font-family:êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>Launch
+the Hive shell.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -667,18 +606,18 @@ the Hive shell.</span><span lang=EN-US><o:p></o:p></span></p>
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
-  mso-themecolor:text1;mso-themetint:191'>hive</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-themecolor:text1;mso-themetint:191'>hive</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='mso-bidi-font-size:10.0pt;font-family:"¸¼Àº °íµñ";mso-hansi-font-family:
-±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>¨è </span><span lang=EN-US style='font-size:
-9.0pt;font-family:"¸¼Àº °íµñ";mso-hansi-font-family:±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>Define
-a table.</span><span lang=EN-US><o:p></o:p></span></p>
+style='mso-bidi-font-size:10.0pt;font-family:"ë§‘ì€ ê³ ë”•";mso-hansi-font-family:
+êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>â‘¡ </span><span lang=EN-US style='font-size:
+9.0pt;font-family:"ë§‘ì€ ê³ ë”•";mso-hansi-font-family:êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>Define
+a table.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -688,53 +627,51 @@ a table.</span><span lang=EN-US><o:p></o:p></span></p>
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'>CREATE TABLE TwitterExampletextexample(</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'>CREATE TABLE TwitterExampletextexample(</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>tweetId BIGINT, username STRING,</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>tweetId BIGINT, username STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>txt STRING, CreatedAt STRING,</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>txt STRING, CreatedAt STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>profileLocation STRING,</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>profileLocation STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>favc BIGINT,retweet STRING,retcount BIGINT,followerscount BIGINT)</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>favc BIGINT,retweet STRING,retcount BIGINT,followerscount BIGINT)</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
-  </span>COMMENT 'This is the Twitter streaming data'</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>COMMENT 'This is the Twitter streaming data'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
-  </span>ROW FORMAT DELIMITED</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ROW FORMAT DELIMITED</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
-  </span>FIELDS TERMINATED BY '\t'</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>FIELDS TERMINATED BY '\t'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
-  mso-fareast-font-family:"¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
-  </span>STORED AS TEXTFILE;</span><span lang=EN-US><o:p></o:p></span></p>
+  mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>STORED AS TEXTFILE;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='mso-bidi-font-size:10.0pt;font-family:"¸¼Àº °íµñ";mso-hansi-font-family:
-±¼¸²;mso-bidi-font-family:"¸¼Àº °íµñ"'>¨é </span><span lang=EN-US style='font-size:
+style='mso-bidi-font-size:10.0pt;font-family:"ë§‘ì€ ê³ ë”•";mso-hansi-font-family:
+êµ´ë¦¼;mso-bidi-font-family:"ë§‘ì€ ê³ ë”•"'>â‘¢ </span><span lang=EN-US style='font-size:
 9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";color:#404040;
-mso-themecolor:text1;mso-themetint:191'>Load a ¡®TwitterData.txt¡¯ file into
-¡®TwitterExampletextexample¡¯ table.</span><span lang=EN-US><o:p></o:p></span></p>
+mso-themecolor:text1;mso-themetint:191'>Load a â€˜TwitterData.txtâ€™ file into
+â€˜TwitterExampletextexampleâ€™ table.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -748,63 +685,53 @@ mso-themecolor:text1;mso-themetint:191'>Load a ¡®TwitterData.txt¡¯ file into
   style='mso-spacerun:yes'>&nbsp; </span>DATA<span style='mso-spacerun:yes'>&nbsp;
   </span>INPATH<span style='mso-spacerun:yes'>&nbsp;
   </span>'/user/hadoop/TwitterData.txt' OVERWRITE INTO TABLE
-  TwitterExampletextexample;</span><span lang=EN-US><o:p></o:p></span></p>
+  TwitterExampletextexample;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
 font-family:"Arial","sans-serif";color:#0070C0'>Step 3. Create a Table Using
-RCFormat</span></b><span lang=EN-US><o:p></o:p></span></p>
+RCFormat</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 margin-left:13.5pt;text-indent:-13.5pt;mso-char-indent-count:-1.5'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>The RC (Record-Columnar)
 File is a column-based file format, to manage the record low in groups. With
-this format, you can get</span><span lang=EN-US><o:p></o:p></span></p>
+this format, you can get</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 margin-left:13.5pt;text-indent:-13.5pt;mso-char-indent-count:-1.5'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>the advantages of a
-columnar format over row format of a record.</span><span lang=EN-US><o:p></o:p></span></p>
+columnar format over row format of a record.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>The figure below shows
 the step-by-step picture to help you understand the process of creating the RC
-file.</span><span lang=EN-US><o:p></o:p></span></p>
+file.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:#404040;mso-themecolor:text1;mso-themetint:191;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1033" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_170/drivesol_1423387254254SWATy_PNG/reference.png"
- style='width:940.5pt;height:632.25pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image005.png"
-  o:href="http://blogfiles.naver.net/20150208_170/drivesol_1423387254254SWATy_PNG/reference.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1254 height=843
+color:#404040;mso-themecolor:text1;mso-themetint:191;mso-no-proof:yes'><img border=0 width=1254 height=843
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image005.png"
 alt="http://blogfiles.naver.net/20150208_170/drivesol_1423387254254SWATy_PNG/reference.png"
-v:shapes="_x0000_i1033"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1033"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:black;mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1032" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_163/drivesol_1423387252436fduIW_PNG/02.png"
- style='width:915.75pt;height:470.25pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image006.png"
-  o:href="http://blogfiles.naver.net/20150208_163/drivesol_1423387252436fduIW_PNG/02.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1221 height=627
+color:black;mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1221 height=627
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image006.png"
 alt="http://blogfiles.naver.net/20150208_163/drivesol_1423387252436fduIW_PNG/02.png"
-v:shapes="_x0000_i1032"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1032"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt'>¨ç</span><span lang=EN-US style='font-size:9.0pt;
-font-family:"Arial","sans-serif";mso-fareast-font-family:"¸¼Àº °íµñ"'> Create RC
-file format table.</span><span lang=EN-US><o:p></o:p></span></p>
+style='font-size:9.0pt'>â‘ </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'> Create RC
+file format table.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -824,15 +751,15 @@ file format table.</span><span lang=EN-US><o:p></o:p></span></p>
   COMMENT 'This is the Twitter streaming data'<br>
   ROW FORMAT DELIMITED<br>
   FIELDS TERMINATED BY '\t'<br>
-  STORED AS RCFILE;</span><span lang=EN-US><o:p></o:p></span></p>
+  STORED AS RCFILE;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt'>¨è</span><span lang=EN-US style='font-size:9.0pt;
-font-family:"Arial","sans-serif";mso-fareast-font-family:"¸¼Àº °íµñ"'> Load data
-into the RC Table. Execute and check the results.</span><span lang=EN-US><o:p></o:p></span></p>
+style='font-size:9.0pt'>â‘¡</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'> Load data
+into the RC Table. Execute and check the results.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -843,20 +770,18 @@ into the RC Table. Execute and check the results.</span><span lang=EN-US><o:p></
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>INSERT OVERWRITE TABLE
-  TwitterExampleRCtable select * from TwitterExampletextexample;</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  TwitterExampleRCtable select * from TwitterExampletextexample;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
-font-family:"Arial","sans-serif";color:#0070C0'>Step 4. Query the Tables</span></b><span
-lang=EN-US><o:p></o:p></span></p>
+font-family:"Arial","sans-serif";color:#0070C0'>Step 4. Query the Tables</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:black;mso-themecolor:text1'>Find top ten countries who tweeted most using
-TwitterExampleRCtable. And check the result.</span><span lang=EN-US><o:p></o:p></span></p>
+TwitterExampleRCtable. And check the result.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -868,54 +793,43 @@ TwitterExampleRCtable. And check the result.</span><span lang=EN-US><o:p></o:p><
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>Select profileLocation,
   COUNT(txt) as count1 FROM TwitterExampleRCtable GROUP BY profileLocation
-  ORDER BY count1 desc limit 10;</span><span lang=EN-US><o:p></o:p></span></p>
+  ORDER BY count1 desc limit 10;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:black;mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1031" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_63/drivesol_14233872526902Aa5P_PNG/03.png"
- style='width:915.75pt;height:606.75pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image007.png"
-  o:href="http://blogfiles.naver.net/20150208_63/drivesol_14233872526902Aa5P_PNG/03.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1221 height=809
+color:black;mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1221 height=809
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image007.png"
 alt="http://blogfiles.naver.net/20150208_63/drivesol_14233872526902Aa5P_PNG/03.png"
-v:shapes="_x0000_i1031"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1031"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
 font-family:"Arial","sans-serif";color:#0070C0'>Step 5. Compare the Managed
-Tables and External Tables</span></b><span lang=EN-US><o:p></o:p></span></p>
+Tables and External Tables</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Managed tables are created
 by default with CREATE TABLE statements, otherwise External tables are used
-when you want your tables to point to data file in place. </span><span
-lang=EN-US><o:p></o:p></span></p>
+when you want your tables to point to data file in place. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:black;mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1030" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_1/drivesol_14233872529907x8mM_PNG/04.png"
- style='width:915.75pt;height:318.75pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image008.png"
-  o:href="http://blogfiles.naver.net/20150208_1/drivesol_14233872529907x8mM_PNG/04.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1221 height=425
+color:black;mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1221 height=425
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image008.png"
 alt="http://blogfiles.naver.net/20150208_1/drivesol_14233872529907x8mM_PNG/04.png"
-v:shapes="_x0000_i1030"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1030"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt'>¨ç</span><span lang=EN-US style='font-size:9.0pt;
+style='font-size:9.0pt'>â‘ </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Arial","sans-serif"'> Create the</span><span lang=EN-US
 style='font-size:9.0pt'> </span><span lang=EN-US style='font-size:9.0pt;
-font-family:"Arial","sans-serif"'>Managed Table.</span><span lang=EN-US><o:p></o:p></span></p>
+font-family:"Arial","sans-serif"'>Managed Table.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -925,49 +839,46 @@ font-family:"Arial","sans-serif"'>Managed Table.</span><span lang=EN-US><o:p></o
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'>CREATE TABLE ManagedExample(</span><span lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'>CREATE TABLE ManagedExample(</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tweetId BIGINT,
-  username STRING,</span><span lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tweetId BIGINT,
+  username STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>txt STRING, CreatedAt
-  STRING,</span><span lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>txt STRING, CreatedAt
+  STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>profileLocation
-  STRING,</span><span lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>profileLocation
+  STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>favc BIGINT,retweet
-  STRING,retcount BIGINT,followerscount BIGINT)</span><span lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>favc BIGINT,retweet
+  STRING,retcount BIGINT,followerscount BIGINT)</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>COMMENT 'This is the
-  Twitter streaming data'</span><span lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>COMMENT 'This is the
+  Twitter streaming data'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>ROW FORMAT DELIMITED</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>ROW FORMAT DELIMITED</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>FIELDS TERMINATED BY '\t'</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>FIELDS TERMINATED BY '\t'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>STORED AS TEXTFILE;</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>STORED AS TEXTFILE;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt'>¨è </span><span lang=EN-US style='font-size:9.0pt;
+style='font-size:9.0pt'>â‘¡ </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Arial","sans-serif"'>Create the <span style='background:aqua;
-mso-highlight:aqua'>External</span> Table.</span><span lang=EN-US><o:p></o:p></span></p>
+mso-highlight:aqua'>External</span> Table.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -978,68 +889,64 @@ mso-highlight:aqua'>External</span> Table.</span><span lang=EN-US><o:p></o:p></s
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'>CREATE <span style='background:aqua;
-  mso-highlight:aqua'>EXTERNAL</span> TABLE IF NOT EXISTS ExternalExample(</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-highlight:aqua'>EXTERNAL</span> TABLE IF NOT EXISTS ExternalExample(</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tweetId BIGINT, username STRING,</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tweetId BIGINT, username STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>txt STRING, CreatedAt STRING,</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>txt STRING, CreatedAt STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span><span style='mso-spacerun:yes'>&nbsp;&nbsp;</span>profileLocation STRING,</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  </span><span style='mso-spacerun:yes'>&nbsp;&nbsp;</span>profileLocation STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span
   style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>favc BIGINT,retweet STRING,retcount
-  BIGINT,followerscount BIGINT)</span><span lang=EN-US><o:p></o:p></span></p>
+  BIGINT,followerscount BIGINT)</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
-  </span>COMMENT 'This is the Twitter streaming data'</span><span lang=EN-US><o:p></o:p></span></p>
+  </span>COMMENT 'This is the Twitter streaming data'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
-  </span>ROW FORMAT DELIMITED</span><span lang=EN-US><o:p></o:p></span></p>
+  </span>ROW FORMAT DELIMITED</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
-  </span>FIELDS TERMINATED BY '\t'</span><span lang=EN-US><o:p></o:p></span></p>
+  </span>FIELDS TERMINATED BY '\t'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
-  </span>STORED AS TEXTFILE</span><span lang=EN-US><o:p></o:p></span></p>
+  </span>STORED AS TEXTFILE</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
   </span><span style='background:aqua;mso-highlight:aqua'>location
-  '/user/hadoop/TwitterData.txt';</span></span><span lang=EN-US><o:p></o:p></span></p>
+  '/user/hadoop/TwitterData.txt';</span></span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
 auto;text-align:center'><span lang=EN-US style='font-size:9.0pt;font-family:
 "Arial","sans-serif";color:#404040;mso-themecolor:text1;mso-themetint:191'>When
 you drop a Managed table, it deletes the data, and it also deletes the
-metadata. </span><span lang=EN-US><o:p></o:p></span></p>
+metadata. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
 auto;text-align:center'><span lang=EN-US style='font-size:9.0pt;font-family:
 "Arial","sans-serif";color:#404040;mso-themecolor:text1;mso-themetint:191'>But
-External table case, it only deletes the metadata. </span><span lang=EN-US><o:p></o:p></span></p>
+External table case, it only deletes the metadata. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt;color:#404040;mso-themecolor:text1;mso-themetint:191'>¨é<span
+style='font-size:9.0pt;color:#404040;mso-themecolor:text1;mso-themetint:191'>â‘¢<span
 lang=EN-US> Compare the output with Managed table and External table, by
-command for describe.</span></span><span lang=EN-US><o:p></o:p></span></p>
+command for describe.</span></span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -1049,8 +956,7 @@ command for describe.</span></span><span lang=EN-US><o:p></o:p></span></p>
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
-  mso-themecolor:text1;mso-themetint:191'>describe formatted ManagedExample;</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-themecolor:text1;mso-themetint:191'>describe formatted ManagedExample;</span></p>
         </td>
     </tr>
     <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
@@ -1060,44 +966,32 @@ command for describe.</span></span><span lang=EN-US><o:p></o:p></span></p>
   51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";color:#404040;
-  mso-themecolor:text1;mso-themetint:191'>describe formatted ExternalExample;</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-themecolor:text1;mso-themetint:191'>describe formatted ExternalExample;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:black;mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1029" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_228/drivesol_1423387253188fCkH2_PNG/05.png"
- style='width:915.75pt;height:523.5pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image009.png"
-  o:href="http://blogfiles.naver.net/20150208_228/drivesol_1423387253188fCkH2_PNG/05.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1221 height=698
+color:black;mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1221 height=698
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image009.png"
 alt="http://blogfiles.naver.net/20150208_228/drivesol_1423387253188fCkH2_PNG/05.png"
-v:shapes="_x0000_i1029"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1029"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:black;mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1028" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_33/drivesol_1423387253388HT3CI_PNG/06.png"
- style='width:915.75pt;height:523.5pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image010.png"
-  o:href="http://blogfiles.naver.net/20150208_33/drivesol_1423387253388HT3CI_PNG/06.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1221 height=698
+color:black;mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1221 height=698
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image010.png"
 alt="http://blogfiles.naver.net/20150208_33/drivesol_1423387253388HT3CI_PNG/06.png"
-v:shapes="_x0000_i1028"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1028"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
-font-family:"Arial","sans-serif";color:#0070C0'>Step 6. Storing as ORCFormat</span></b><span
-lang=EN-US><o:p></o:p></span></p>
+font-family:"Arial","sans-serif";color:#0070C0'>Step 6. Storing as ORCFormat</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>RC file influenced by the
@@ -1105,32 +999,26 @@ column type, you can apply a SerDe only one record at a time. So each data type
 can not be applied to the effective compression. In addition, the RC file is inefficient
 when you look up the specific value of the data type, such as Map, List. This
 is because because with the RC file is also unnecessary to query the data in
-Map and List in was designed for sequential record access. </span><span
-lang=EN-US><o:p></o:p></span></p>
+Map and List in was designed for sequential record access. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>ORC is a file format that
 improves the shortcomings of these RC files. ORC file has been added from the
 hive 0.12.0, for certain types of queries show the performance gains over
 previous file formats. However, a significant amount of time it takes to
-produce the ORC file compared to the previous file.</span><span lang=EN-US><o:p></o:p></span></p>
+produce the ORC file compared to the previous file.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>.</span><span lang=EN-US
 style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:black;mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1027" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_228/drivesol_1423387253567KLXbr_PNG/07.png"
- style='width:915.75pt;height:204.75pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image011.png"
-  o:href="http://blogfiles.naver.net/20150208_228/drivesol_1423387253567KLXbr_PNG/07.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1221 height=273
+color:black;mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1221 height=273
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image011.png"
 alt="http://blogfiles.naver.net/20150208_228/drivesol_1423387253567KLXbr_PNG/07.png"
-v:shapes="_x0000_i1027"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1027"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Create ORC file format
-table.</span><span lang=EN-US><o:p></o:p></span></p>
+table.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -1141,81 +1029,72 @@ table.</span><span lang=EN-US><o:p></o:p></span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>CREATE TABLE
-  ORCFileFormatExample(</span><span lang=EN-US><o:p></o:p></span></p>
+  ORCFileFormatExample(</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tweetId INT, username BIGINT,</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tweetId INT, username BIGINT,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>txt STRING, CreatedAt STRING,</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>txt STRING, CreatedAt STRING,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
   style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>profileLocation STRING COMMENT
-  'Location of user',</span><span lang=EN-US><o:p></o:p></span></p>
+  'Location of user',</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
   style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>favc INT,retweet STRING,retcount
-  INT,followerscount INT)</span><span lang=EN-US><o:p></o:p></span></p>
+  INT,followerscount INT)</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
   style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>COMMENT 'This is the Twitter streaming
-  data'</span><span lang=EN-US><o:p></o:p></span></p>
+  data'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>ROW FORMAT DELIMITED</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>ROW FORMAT DELIMITED</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>FIELDS TERMINATED BY '\t'</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>FIELDS TERMINATED BY '\t'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
   style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>STORED AS ORC tblproperties
-  (&quot;orc.compress&quot;=&quot;ZLIB&quot;);</span><span lang=EN-US><o:p></o:p></span></p>
+  (&quot;orc.compress&quot;=&quot;ZLIB&quot;);</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
 font-family:"Arial","sans-serif";color:#0070C0'>Step 7. Create a PARTITIONED
-Table</span></b><span lang=EN-US><o:p></o:p></span></p>
+Table</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#262626;mso-themecolor:text1;mso-themetint:217'>Partitions are horizontal
 slices of data which allow large sets of data to be segmented into more
-manageable blocks.</span><span lang=EN-US><o:p></o:p></span></p>
+manageable blocks.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:black;mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1026" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_55/drivesol_14233872537615bz3X_PNG/08.png"
- style='width:915.75pt;height:468pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image012.png"
-  o:href="http://blogfiles.naver.net/20150208_55/drivesol_14233872537615bz3X_PNG/08.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1221 height=624
+color:black;mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1221 height=624
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image012.png"
 alt="http://blogfiles.naver.net/20150208_55/drivesol_14233872537615bz3X_PNG/08.png"
-v:shapes="_x0000_i1026"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1026"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt'>¨ç</span><span lang=EN-US style='font-size:9.0pt;
-font-family:"Arial","sans-serif";mso-fareast-font-family:"¸¼Àº °íµñ"'> Create
-PARTITIONED table.</span><span lang=EN-US><o:p></o:p></span></p>
+style='font-size:9.0pt'>â‘ </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"ë§‘ì€ ê³ ë”•"'> Create
+PARTITIONED table.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -1225,26 +1104,24 @@ PARTITIONED table.</span><span lang=EN-US><o:p></o:p></span></p>
   accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'>CREATE TABLE PARTITIONEDExample(</span><span lang=EN-US><o:p></o:p></span></p>
+  "ë§‘ì€ ê³ ë”•"'>CREATE TABLE PARTITIONEDExample(</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
-  "¸¼Àº °íµñ"'>tweetId INT, username BIGINT, txt STRING,favc INT,retweet
+  "ë§‘ì€ ê³ ë”•"'>tweetId INT, username BIGINT, txt STRING,favc INT,retweet
   STRING,retcount INT,followerscount INT) COMMENT 'This is the Twitter
   streaming data' PARTITIONED BY(CreatedAt STRING, profileLocation STRING) ROW
-  FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TEXTFILE;</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TEXTFILE;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-style='font-size:9.0pt'>¨è</span><span lang=EN-US style='font-size:9.0pt;
+style='font-size:9.0pt'>â‘¡</span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Arial","sans-serif"'> Load data into PARTITIONED table. Then</span><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Arial","sans-serif";
-color:#404040;mso-themecolor:text1;mso-themetint:191'> check the result. </span><span
-lang=EN-US><o:p></o:p></span></p>
+color:#404040;mso-themecolor:text1;mso-themetint:191'> check the result. </span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -1255,23 +1132,23 @@ lang=EN-US><o:p></o:p></span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>FROM
-  twitterexampletextexample</span><span lang=EN-US><o:p></o:p></span></p>
+  twitterexampletextexample</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>INSERT OVERWRITE TABLE
   PARTITIONEDExample PARTITION (CreatedAt=&quot;26 04:50:56 UTC
   2014&quot;,profileLocation=&quot;Chicago&quot;) SELECT tweetId,username,txt,favc,retweet,retcount,followerscount
-  where profileLocation='Chicago' limit 100;</span><span lang=EN-US><o:p></o:p></span></p>
+  where profileLocation='Chicago' limit 100;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b
 style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt;
 font-family:"Arial","sans-serif";color:#0070C0'>Step 8. Create a Table with
-Bucket</span></b><span lang=EN-US><o:p></o:p></span></p>
+Bucket</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Hive provides a data
@@ -1281,26 +1158,20 @@ tables, and they may later allow for time saving operations such as map side
 joins. However, the bucketing specified at table creation is not enforced when
 the table is written to, and so it is possible for the table's metadata to
 advertise properties which are not upheld by the table's actual layout. This
-should obviously be avoided.</span><span lang=EN-US><o:p></o:p></span></p>
+should obviously be avoided.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
-color:black;mso-themecolor:text1;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1025" type="#_x0000_t75" alt="http://blogfiles.naver.net/20150208_5/drivesol_142338725397555afg_PNG/09.png"
- style='width:915.75pt;height:834pt;visibility:visible'>
- <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image013.png"
-  o:href="http://blogfiles.naver.net/20150208_5/drivesol_142338725397555afg_PNG/09.png"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1221 height=1112
+color:black;mso-themecolor:text1;mso-no-proof:yes'><img border=0 width=1221 height=1112
 src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image013.png"
 alt="http://blogfiles.naver.net/20150208_5/drivesol_142338725397555afg_PNG/09.png"
-v:shapes="_x0000_i1025"><![endif]></span><span lang=EN-US><o:p></o:p></span></p>
+v:shapes="_x0000_i1025"></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 style='font-size:9.0pt;mso-bidi-font-size:11.0pt;color:#404040;mso-themecolor:
-text1;mso-themetint:191'>¨ç</span><span lang=EN-US style='font-size:9.0pt;
+text1;mso-themetint:191'>â‘ </span><span lang=EN-US style='font-size:9.0pt;
 mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";color:#404040;
-mso-themecolor:text1;mso-themetint:191'> Create the table with Bucket.</span><span
-lang=EN-US><o:p></o:p></span></p>
+mso-themecolor:text1;mso-themetint:191'> Create the table with Bucket.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -1311,83 +1182,75 @@ lang=EN-US><o:p></o:p></span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>CREATE TABLE
-  BucketingExample(</span><span lang=EN-US><o:p></o:p></span></p>
+  BucketingExample(</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tweetId INT, username BIGINT,</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tweetId INT, username BIGINT,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
   style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>txt STRING,CreatedAt STRING,favc
-  INT,retweet STRING,retcount INT,</span><span lang=EN-US><o:p></o:p></span></p>
+  INT,retweet STRING,retcount INT,</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto;text-indent:36.0pt;
   mso-char-indent-count:4.0'><span lang=EN-US style='font-size:9.0pt;
   mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";color:#404040;
-  mso-themecolor:text1;mso-themetint:191'>followerscount INT)</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-themecolor:text1;mso-themetint:191'>followerscount INT)</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
   style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>COMMENT 'This is the Twitter streaming
-  data'</span><span lang=EN-US><o:p></o:p></span></p>
+  data'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>PARTITIONED BY( profileLocation STRING)</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>PARTITIONED BY( profileLocation STRING)</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>CLUSTERED BY(tweetId) INTO 2 BUCKETS</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>CLUSTERED BY(tweetId) INTO 2 BUCKETS</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>ROW FORMAT DELIMITED</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>ROW FORMAT DELIMITED</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>FIELDS TERMINATED BY '\t'</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>FIELDS TERMINATED BY '\t'</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>STORED AS TEXTFILE;</span><span
-  lang=EN-US><o:p></o:p></span></p>
-            <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US>&nbsp;<o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>STORED AS TEXTFILE;</span></p>
+            <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US>&nbsp;</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto;text-indent:18.0pt;
   mso-char-indent-count:2.0'><span lang=EN-US style='font-size:9.0pt;
   mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";color:#404040;
-  mso-themecolor:text1;mso-themetint:191'>set hive.enforce.bucketing = true;</span><span
-  lang=EN-US><o:p></o:p></span></p>
+  mso-themecolor:text1;mso-themetint:191'>set hive.enforce.bucketing = true;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 margin-left:27.0pt;text-indent:-27.0pt;mso-char-indent-count:-3.0'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
-color:#404040;mso-themecolor:text1;mso-themetint:191'>Ref*.) The command ¡®</span><span
+color:#404040;mso-themecolor:text1;mso-themetint:191'>Ref*.) The command â€˜</span><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191;background:aqua;
 mso-highlight:aqua'>set hive.enforce.bucketing = true;</span><span lang=EN-US
 style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
-color:#404040;mso-themecolor:text1;mso-themetint:191'>¡¯</span><span lang=EN-US
+color:#404040;mso-themecolor:text1;mso-themetint:191'>â€™</span><span lang=EN-US
 style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'> allows the correct number
 of reducers and the cluster by column to be automatically selected based on the
-table.</span><span lang=EN-US><o:p></o:p></span></p>
+table.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 style='font-size:9.0pt;mso-bidi-font-size:11.0pt;color:#404040;mso-themecolor:
-text1;mso-themetint:191'>¨è</span><span lang=EN-US style='font-size:9.0pt;
+text1;mso-themetint:191'>â‘¡</span><span lang=EN-US style='font-size:9.0pt;
 mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";color:#404040;
 mso-themecolor:text1;mso-themetint:191'> Load a data to new table. Then check
-the result.</span><span lang=EN-US><o:p></o:p></span></p>
+the result.</span></p>
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -1398,27 +1261,27 @@ the result.</span><span lang=EN-US><o:p></o:p></span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'>FROM
-  twitterexampletextexample</span><span lang=EN-US><o:p></o:p></span></p>
+  twitterexampletextexample</span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto'><span lang=EN-US
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
   color:#404040;mso-themecolor:text1;mso-themetint:191'><span
   style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>INSERT OVERWRITE TABLE BucketingExample
   PARTITION (profileLocation=&quot;Chicago&quot;)<span
-  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span lang=EN-US><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span></p>
             <p class=MsoNormal style='mso-margin-top-alt:auto;text-indent:18.0pt;
   mso-char-indent-count:2.0'><span lang=EN-US style='font-size:9.0pt;
   mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";color:#404040;
   mso-themecolor:text1;mso-themetint:191'>SELECT
   tweetId,username,txt,CreatedAt,favc,retweet,retcount,followerscount where
-  profileLocation='Chicago' limit 100;</span><span lang=EN-US><o:p></o:p></span></p>
+  profileLocation='Chicago' limit 100;</span></p>
         </td>
     </tr>
 </table>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Now whole steps were
@@ -1428,47 +1291,44 @@ done.<br>
 <br>
 <br>
 </span><b><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;
-font-family:"Arial","sans-serif";color:#00B0F0'>Conclusion</span></b><span
-lang=EN-US><o:p></o:p></span></p>
+font-family:"Arial","sans-serif";color:#00B0F0'>Conclusion</span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
-lang=EN-US>&nbsp;<o:p></o:p></span></p>
+lang=EN-US>&nbsp;</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>There are two tools for
-doing SQL-like queries in CDH: Hive and Impala. </span><span lang=EN-US><o:p></o:p></span></p>
+doing SQL-like queries in CDH: Hive and Impala. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Hive works by translating
 SQL queries into MapReduce jobs, so it's best for large batch jobs and applying
-flexible transformations. </span><span lang=EN-US><o:p></o:p></span></p>
+flexible transformations. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Impala is significantly
 faster and is intended to have low enough latency for interactive queries and
-data exploration. </span><span lang=EN-US><o:p></o:p></span></p>
+data exploration. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Impala and Hive can share
-the metadata about these tables (and their query languages are similar), </span><span
-lang=EN-US><o:p></o:p></span></p>
+the metadata about these tables (and their query languages are similar), </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>so we have used Hive's
 shell to define these tables, similar to how you would have defined them in
-your relational database. </span><span lang=EN-US><o:p></o:p></span></p>
+your relational database. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Hive's query language
 will look very familiar if you know SQL, and they are intended to be as
-compatible as possible. </span><span lang=EN-US><o:p></o:p></span></p>
+compatible as possible. </span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
 color:#404040;mso-themecolor:text1;mso-themetint:191'>Then you will run the
-same query in Impala and compare performance.</span><span lang=EN-US><o:p></o:p></span></p>
+same query in Impala and compare performance.</span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
 lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif";
-color:#404040;mso-themecolor:text1;mso-themetint:191'>Good luck !</span><span
-lang=EN-US><o:p></o:p></span></p>
+color:#404040;mso-themecolor:text1;mso-themetint:191'>Good luck !</span></p>
 <p>&nbsp;</p>
 </body>
 
